@@ -27,7 +27,7 @@ app.get("/", (req,res) => {
 
 app.get("/:url", async (req, res) => {
     try {
-        if(isShortenedUrlValid(req.body.url)) {
+        if(isShortenedUrlValid(req.params.url)) {
             res.redirect("test");
         } else {
             res.send("Invalid url");
